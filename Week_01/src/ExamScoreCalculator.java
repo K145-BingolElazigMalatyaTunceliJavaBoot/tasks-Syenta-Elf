@@ -14,27 +14,22 @@ public class ExamScoreCalculator {
 
     public static void calculate(){
         int finalScore = (firstScore + secondScore)/2;
-        if(AA>finalScore && finalScore>BB){
-            System.out.println("You got AA, score = " + finalScore);
-        } else if (BB>finalScore && finalScore>DC) {
-            System.out.println("You got BB, score = " + finalScore);
-        }else if(DC>firstScore && finalScore>FF){
-            System.out.println("You got DC, score = " + finalScore);
-        }else{
-            System.out.println("You got FF, score = " + finalScore);
-        }
+        result(finalScore);
     }
     public static void calculate(int fScore, int sScore){
         if (!(fScore > 0 && sScore > 0)){
             throw new UnsupportedOperationException();
     }
-
         int finalScore = (fScore + sScore)/2;
+        result(finalScore);
+    }
+
+    private static void result(int finalScore){
         if(AA>finalScore && finalScore>BB){
             System.out.println("You got AA, score = " + finalScore);
         } else if (BB>finalScore && finalScore>DC) {
             System.out.println("You got BB, score = " + finalScore);
-        }else if(DC>firstScore && finalScore>FF){
+        }else if(DC>finalScore && finalScore>FF){
             System.out.println("You got DC, score = " + finalScore);
         }else{
             System.out.println("You got FF, score = " + finalScore);
