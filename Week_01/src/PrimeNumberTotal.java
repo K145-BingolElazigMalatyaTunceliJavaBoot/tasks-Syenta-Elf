@@ -14,10 +14,9 @@ public class PrimeNumberTotal {
         }
         System.out.println(total);
     }
-
     private static boolean isPrime(int number){
         int i = 2;
-        while (number>2 && i!=number){
+        while (number>=2 && i!=number){
             if(number%i==0){
                 return false;
             }

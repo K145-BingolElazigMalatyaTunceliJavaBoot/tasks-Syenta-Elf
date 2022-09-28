@@ -13,7 +13,7 @@ public class FindTheChoosenRandom {
     public static void calculate(){
 
         Random random = new Random();
-        int randomNumber = BOTTOM_LIMIT+(int)(Math.random()* TOP_LIMIT);
+        int randomNumber = RANDOM_START+(int)(Math.random()* RANDOM_END);
         int counter = 1;
         while (true){
             if(randomNumber>=BOTTOM_LIMIT && TOP_LIMIT>=randomNumber){
@@ -21,7 +21,7 @@ public class FindTheChoosenRandom {
                 break;
             }
             counter++;
-            randomNumber  = random.nextInt(RANDOM_END);
+            randomNumber  = RANDOM_START+(int)(Math.random()* RANDOM_END);
         }
     }
 }
